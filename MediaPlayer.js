@@ -8,8 +8,20 @@ function MediaPlayer({name, movie, plugins = []}){
 
 //Función para incializar plugins
 MediaPlayer.prototype._initPlugins = function(){
+    const player = {
+        play: () => this.playVideo(), //La función play es igual a la función plyaVideo que creamos
+        pause: ()=> this.pause(),
+        media: this.media,
+
+        get muted(){
+            return this.media.muted
+        },
+        set muted(value){
+            this.media.muted = value
+        }
+    }
     this.plugins.forEach(plugin => {
-        plugin.run(this) //Al inicio vamos a correr cada plugin que tenemos
+        plugin.run(player) //Al inicio vamos a correr cada plugin que tenemos
     })
 }
 

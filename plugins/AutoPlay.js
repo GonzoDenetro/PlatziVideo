@@ -3,8 +3,12 @@ class AutoPlay{
 
     }
     run(player){
-        player.mute()
-        player.playVideo()
+        //Lo que recibimos como paráemtro es el objeto que creamos y corre el método play que le pasamos
+        if(!player.muted){
+            player.muted = true; //Usamos getters y setters para mute
+        }
+        //player.mute()
+        player.play()
     }
 }
 
