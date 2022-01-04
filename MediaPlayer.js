@@ -58,4 +58,11 @@ MediaPlayer.prototype.toogleMute = function(){
     }
 }
 
+//Fullscreen function
+MediaPlayer.prototype.toogleFullscreen = function (){
+    if(this.media.requestFullscreen){
+        this.media.requestFullscreen()
+    }
+}
+
 export default MediaPlayer
