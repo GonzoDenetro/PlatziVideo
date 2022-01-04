@@ -9,6 +9,7 @@ class AutoPlay{
         }
         //player.mute()
         player.play()
+        window.onload = player.play()
     }
 }
 

@@ -22,6 +22,7 @@ MediaPlayer.prototype._initPlugins = function(){
     }
     this.plugins.forEach(plugin => {
         plugin.run(player) //Al inicio vamos a correr cada plugin que tenemos
+        console.log(this.plugins)
     })
 }
 
@@ -32,6 +33,12 @@ MediaPlayer.prototype.playVideo = function(){
     }
     else {
         this.media.pause();
+    }
+}
+
+MediaPlayer.prototype.pause = function(){
+    if( !this.media.paused){
+        this.media.pause()
     }
 }
 
