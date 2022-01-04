@@ -1,7 +1,7 @@
 import MediaPlayer from "./MediaPlayer.js";
 import AutoPlay from "./plugins/AutoPlay.js";
 import AutoPause from "./plugins/AutoPause.js";
-import Comment from "./Comment.js";
+import Comment from "./plugins/Comment.js";
 
 const video = document.querySelector('.video');
 const buttonVideo = document.querySelector('.playPause-btn')
