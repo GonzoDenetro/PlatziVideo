@@ -123,3 +123,18 @@ main {
   width: 100%;
   font-size: 18px;
 }
+.comment {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.comment-author {
+  width: 90%;
+}
+.comment-btn {
+  display: inline-block;
+  width: 80px;
+}
+.comment-description {
+  width: 90%;
+}
