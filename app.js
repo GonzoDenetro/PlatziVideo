@@ -42,3 +42,6 @@ addCommentbtn.onclick = () => {
     const nuevoComentario = new Comment({author: autor, comment: comentario})
     nuevoComentario.addComment(commentsContainer)
 }
+
+
+//document.addEventListener('visibilitychange', () => console.log(`Visibility: ${document.visibilityState}`))

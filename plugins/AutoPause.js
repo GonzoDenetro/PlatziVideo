@@ -2,6 +2,8 @@ class AutoPause {
     constructor(){
         this.umbral = 0.25;
         this.handlerIntersection = this.handlerIntersection.bind(this)
+        this.visibilityChange = this.visibilityChange.bind(this)
+        this.visibleState = true;
     }
     
     run(player){
@@ -11,6 +13,7 @@ class AutoPause {
         })
 
         observer.observe(player.media)
+        document.addEventListener('visibilitychange', this.visibilityChange)
     }
 
     handlerIntersection(entries){
@@ -20,8 +23,19 @@ class AutoPause {
         
         if(entry.isIntersecting){
             this.player.play()
+            this.visibleState = true
         }
         else{ 
+            this.player.pause()
+            this.visibleState = false
+        }
+    }
+
+    visibilityChange(){
+        if(document.visibilityState == 'visible' && this.visibleState == true){
+            this.player.play()
+        }
+        else {
             this.player.pause()
         }
     }
