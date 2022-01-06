@@ -1,4 +1,4 @@
-import MediaPlayer from "../MediaPlayer";
+import MediaPlayer from "../MediaPlayer.js";
 
 class AutoPause {
     private umbral: number;
@@ -28,7 +28,7 @@ class AutoPause {
         //const isVisible = entry.intersectionRatio <= this.umbral
         
         if(entry.isIntersecting){
-            this.player.playVideo()
+            this.player.play()
             this.visibleState = true
         }
         else{ 
@@ -39,7 +39,7 @@ class AutoPause {
 
     visibilityChange(){
         if(document.visibilityState == 'visible' && this.visibleState == true){
-            this.player.playVideo()
+            this.player.play()
         }
         else {
             this.player.pause()

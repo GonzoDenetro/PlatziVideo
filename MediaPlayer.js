@@ -34,6 +34,7 @@ class MediaPlayer {
             this.media.pause();
         }
     }
+
     pause() {
         if (!this.media.paused) {
             this.media.pause();
