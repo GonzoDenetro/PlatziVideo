@@ -28,7 +28,7 @@ class AutoPause {
         //const isVisible = entry.intersectionRatio <= this.umbral
         
         if(entry.isIntersecting){
-            this.player.play()
+            this.player.playVideo()
             this.visibleState = true
         }
         else{ 
@@ -39,7 +39,7 @@ class AutoPause {
 
     visibilityChange(){
         if(document.visibilityState == 'visible' && this.visibleState == true){
-            this.player.play()
+            this.player.playVideo()
         }
         else {
             this.player.pause()
