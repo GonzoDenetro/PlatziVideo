@@ -31,7 +31,7 @@ async function cacheResponse(request){
 async function precache(){
     const cache = await caches.open('V1');
     return cache.addAll([
-        '/',
+        /* '/',
         '/index.html',
         '/CSS/style.css',
         '/app.js',
@@ -39,6 +39,6 @@ async function precache(){
         '/plugins/AutoPlay.js',
         '/plugins/AutoPause.js',
         '/plugins/Comment.js',
-        '/Assets/counter.mp4'
+        '/Assets/counter.mp4' */
     ])
 }

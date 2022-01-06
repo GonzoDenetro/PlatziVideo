@@ -1,4 +1,10 @@
+import MediaPlayer from "../MediaPlayer";
+
 class AutoPause {
+    private umbral: number;
+    private visibleState: boolean;
+    player: MediaPlayer;
+
     constructor(){
         this.umbral = 0.25;
         this.handlerIntersection = this.handlerIntersection.bind(this)
@@ -16,7 +22,7 @@ class AutoPause {
         document.addEventListener('visibilitychange', this.visibilityChange)
     }
 
-    handlerIntersection(entries){
+    handlerIntersection(entries: IntersectionObserverEntry[]){
         const entry = entries[0]
         console.log(entry)
         //const isVisible = entry.intersectionRatio <= this.umbral

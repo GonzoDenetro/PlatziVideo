@@ -4,7 +4,7 @@
   "description": "En el proyecto vamos aplicar conocimientos de JS haciendo un Media Player",
   "main": "app.js",
   "scripts": {
-    "start": "live-server",
+    "start": "parcel index.html TypeScript/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +15,9 @@
   "author": "Gonzalo Ceron <gonzi.ceron.denetro@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "parcel": "^2.1.0"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }

@@ -1,6 +1,6 @@
 import MediaPlayer from "./MediaPlayer.js";
 import AutoPlay from "./plugins/AutoPlay.js";
-import AutoPause from "./plugins/AutoPause.js";
+import AutoPause from "./plugins/AutoPause.ts";
 import Comment from "./plugins/Comment.js";
 
 const video = document.querySelector('.video');
@@ -45,7 +45,11 @@ addCommentbtn.onclick = () => {
 
 
 if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register(
+        new URL( '/sw.js', import.meta.url),
+        {type: 'module',}
+    )
+    .then(()=> console.log('ServiceWorker registration successful'))
     .catch(error => console.error(error.message))
 }
 
