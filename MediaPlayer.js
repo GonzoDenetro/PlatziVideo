@@ -9,7 +9,7 @@ class MediaPlayer {
     //Función para incializar plugins
     _initPlugins() {
         const player = {
-            play: () => this.playVideo(),
+            play: () => this.play(),
             pause: () => this.pause(),
             media: this.media,
 
@@ -34,7 +34,14 @@ class MediaPlayer {
             this.media.pause();
         }
     }
-
+    play() {
+        if (this.media.paused) {
+            this.media.play();
+        }
+        else {
+            this.media.pause();
+        }
+    }
     pause() {
         if (!this.media.paused) {
             this.media.pause();
