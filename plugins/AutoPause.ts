@@ -28,21 +28,21 @@ class AutoPause {
         //const isVisible = entry.intersectionRatio <= this.umbral
         
         if(entry.isIntersecting){
-            this.player.play()
+            this.player.media.play()
             this.visibleState = true
         }
         else{ 
-            this.player.pause()
+            this.player.media.pause()
             this.visibleState = false
         }
     }
 
     visibilityChange(){
         if(document.visibilityState == 'visible' && this.visibleState == true){
-            this.player.play()
+            this.player.media.play()
         }
         else {
-            this.player.pause()
+            this.player.media.pause()
         }
     }
 }
