@@ -1,16 +1,16 @@
-import MediaPlayer from "./MediaPlayer.js";
-import AutoPlay from "./plugins/AutoPlay.js";
-import AutoPause from "./plugins/AutoPause.ts";
-import Comment from "./plugins/Comment.js";
+import MediaPlayer from "./MediaPlayer";
+import AutoPlay from "./plugins/AutoPlay";
+import AutoPause from "./plugins/AutoPause";
+import Comment from "./plugins/Comment";
 
-const video = document.querySelector('.video');
-const buttonVideo = document.querySelector('.playPause-btn')
-const buttonAudio = document.querySelector('.mute')
-const buttonScreen = document.querySelector('.screen')
-const addCommentbtn = document.querySelector('.comment-btn')
-const authorComment = document.querySelector('#author');
-const comment = document.querySelector('#comment');
-const commentsContainer = document.querySelector('.comentarios')
+const video:HTMLElement = document.querySelector('.video');
+const buttonVideo:HTMLElement = document.querySelector('.playPause-btn')
+const buttonAudio:HTMLElement = document.querySelector('.mute')
+const buttonScreen:HTMLElement = document.querySelector('.screen')
+const addCommentbtn:HTMLElement = document.querySelector('.comment-btn')
+const authorComment:HTMLInputElement = document.querySelector('#author');
+const comment:HTMLInputElement = document.querySelector('#comment');
+const commentsContainer:HTMLElement = document.querySelector('.comentarios')
 
 const player = new MediaPlayer({
     movie: video, 

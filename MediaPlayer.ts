@@ -1,14 +1,18 @@
 class MediaPlayer {
+    media: HTMLMediaElement;
+    plugins: Array <any>;
+    name: string;
+
     constructor({ name, movie, plugins = [] }) {
         this.name = name;
         this.media = movie;
         this.plugins = plugins;
 
-        this._initPlugins();
+        this.initPlugins();
     }
     //Función para incializar plugins
-    _initPlugins() {
-        const player = {
+    private initPlugins() {
+        /* const player = {
             play: () => this.play(),
             pause: () => this.pause(),
             media: this.media,
@@ -19,9 +23,9 @@ class MediaPlayer {
             set muted(value) {
                 this.media.muted = value;
             }
-        };
+        }; */
         this.plugins.forEach(plugin => {
-            plugin.run(player); //Al inicio vamos a correr cada plugin que tenemos
+            plugin.run(this); //Al inicio vamos a correr cada plugin que tenemos
             console.log(this.plugins);
         });
     }

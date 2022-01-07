@@ -18,6 +18,6 @@
     "parcel": "^2.1.0"
   },
   "browserslist": [
-    "last 1 Chrome version"
+    "last 3 chrome versions"
   ]
 }

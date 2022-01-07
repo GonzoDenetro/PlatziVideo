@@ -1,4 +1,7 @@
 class Comment{
+    author: string;
+    comment: string;
+    
     constructor({author, comment}){
         this.author = author;
         this.comment = comment;
