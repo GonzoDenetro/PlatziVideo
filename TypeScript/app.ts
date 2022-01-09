@@ -1,3 +1,12 @@
+import Singleton from "./Singleton";
+
+const a = Singleton.getInstance();
+const b = Singleton.getInstance()
+
+if(a === b){
+    console.log('Solo tenemos una instancia')
+}
+
 console.log('Hola TypeScript');
 
 //TIPOS DE DATOS
