@@ -2,6 +2,7 @@ import MediaPlayer from "./MediaPlayer";
 import AutoPlay from "./plugins/AutoPlay";
 import AutoPause from "./plugins/AutoPause";
 import Comment from "./plugins/Comment";
+import AdsPlugin from "./Ads/AdsPlugin";
 
 const video:HTMLElement = document.querySelector('.video');
 const buttonVideo:HTMLElement = document.querySelector('.playPause-btn')
@@ -18,6 +19,7 @@ const player = new MediaPlayer({
     plugins:[
         new AutoPlay(),
         new AutoPause(),
+        new AdsPlugin(),
     ]
 })
 
