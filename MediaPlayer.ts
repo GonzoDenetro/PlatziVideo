@@ -2,15 +2,27 @@ class MediaPlayer {
     media: HTMLMediaElement;
     plugins: Array <any>;
     name: string;
+    container:HTMLElement;
 
     constructor({ name, movie, plugins = [] }) {
         this.name = name;
         this.media = movie;
         this.plugins = plugins;
 
+        this.initPlayer();
         this.initPlugins();
     }
     
+
+    initPlayer(){
+        this.container = document.createElement('div');
+        this.container.classList.add('video-container');
+        this.container.style.position = 'relative';
+
+        this.media.parentNode.insertBefore(this.container, this.media)
+        this.container.appendChild(this.media)   
+    }
+
     //Función para incializar plugins
     private initPlugins() {
         this.plugins.forEach(plugin => {
